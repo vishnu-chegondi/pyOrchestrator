@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+
+RUN apt-get -y update && \
+    apt-get -y upgrade && \
+    apt-get install -y ssh net-tools iputils-ping
+
+RUN adduser test --disabled-password
+
+EXPOSE 22
+
+CMD service ssh start && /bin/sh
