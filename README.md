@@ -7,6 +7,11 @@ A simple python script to run different commands on multiple servers in parallel
 
 To test in local we will run two docker containers on which we will be running the commands we defined in [commands.ini](./commands.ini) file.
 
+
+### Requirements
+* python3
+* pipenv
+
 ### SetUp
 
 Run below docker-compose to run container of openssh-server with ssh enabled.
@@ -27,6 +32,6 @@ Running python script to connect to remote servers in [inventory.ini](./inventor
 pipenv run python main.py
 ```
 
-## Requirements
-* python3
-* pipenv
+### Change Commands
+
+To change list of commands to be running on the each machine modify [commands.ini](./commands.ini)
